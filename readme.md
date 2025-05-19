@@ -512,3 +512,175 @@ branch 'ft/bundle-3' set up to track 'origin/ft/bundle-3'.
 LONOVO@toussaintn23 MSYS ~/Git Exercises (ft/bundle-3)
 $
 ```
+
+##Exercise 2
+```bash
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git add .
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git commit -m "Added some new services"
+[ft/service-redesign 5a38c1e] Added some new services
+ 1 file changed, 6 insertions(+)
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 370.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/tnkundwa/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/tnkundwa/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+nothing to commit, working tree clean
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (main)
+$ git add .
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (main)
+$ git commit -m "Added other new services"
+[main 4b301da] Added other new services
+ 1 file changed, 6 insertions(+)
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/tnkundwa/Gym-Git-Exercise-Solutions.git
+   dc94141..4b301da  main -> main
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (main)
+$ git checkout ft/service-redesign 
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git diff
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git diff main
+diff --git a/services.html b/services.html
+index 0234b54..f25fce6 100644
+--- a/services.html
++++ b/services.html
+@@ -9,10 +9,10 @@
+     <h1>Our services</h1>
+     <h2>We now have a new service!</h2>
+     <ol>
+-        <li>Service 5</li>
+-        <li>Service 6</li>
+-        <li>Service 7</li>
+-        <li>Service 8</li>
++        <li>Service 1</li>
++        <li>Service 2</li>
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git merge main
+-        <li>Service 6</li>
+-        <li>Service 7</li>
+-        <li>Service 8</li>
++        <li>Service 1</li>
++        <li>Service 2</li>
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git merge main
++        <li>Service 1</li>
++        <li>Service 2</li>
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git merge main
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git merge main
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git merge main
+$ git merge main
+Auto-merging services.html
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git add .
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git commit -m "Combined both services"
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 387 bytes | 193.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/tnkundwa/Gym-Git-Exercise-Solutions.git
+   5a38c1e..5459e08  ft/service-redesign -> ft/service-redesign
+
+LONOVO@toussaintn23 MINGW64 ~/Git Exercises (ft/service-redesign)
+$
+```
