@@ -283,3 +283,179 @@ M       readme.md
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
+
+##Exercise 2
+```bash
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git pull
+Your configuration specifies to merge with the ref 'refs/heads/ft/bundle-2'
+from the remote, but no such ref was fetched.
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git add home.html
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 47826cf This is the exercise 1
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash list
+stash@{0}: WIP on dev: 47826cf This is the exercise 1
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git add about.html 
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 47826cf This is the exercise 1
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git add team.html 
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 47826cf This is the exercise 1
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash list
+stash@{0}: WIP on dev: 47826cf This is the exercise 1
+stash@{1}: WIP on dev: 47826cf This is the exercise 1
+stash@{2}: WIP on dev: 47826cf This is the exercise 1
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (e2a12f3cc3a42921623df1d59ade9c5280fa8cd6)
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash list
+stash@{0}: WIP on dev: 47826cf This is the exercise 1
+stash@{1}: WIP on dev: 47826cf This is the exercise 1
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash pop stash@{0}
+On branch dev
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   team.html
+
+Dropped stash@{0} (598a38caccc3a5a67f4d0f1fe1e6a64ac7d95544)
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$  git status
+On branch dev
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   team.html
+
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git add .
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git commit -m "This is the home and team"
+[dev d226dbf] This is the home and team
+ 2 files changed, 22 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 team.html
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git push
+fatal: The upstream branch of your current branch does not match
+the name of your current branch.  To push to the upstream branch
+on the remote, use
+
+    git push origin HEAD:ft/bundle-2
+
+To push to the branch of the same name on the remote, use
+
+    git push origin HEAD
+
+To choose either option permanently, see push.default in 'git help config'.
+
+To avoid automatically configuring an upstream branch when its name
+won't match the local branch, see option 'simple' of branch.autoSetupMerge
+in 'git help config'.
+
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git merge ft/bundle-2
+merge: ft/bundle-2 - not something we can merge
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git push origin HEAD:ft/bundle-2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 550 bytes | 550.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/tnkundwa/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+remote: Heads up! The branch 'ft/bundle-2' that you pushed to was renamed to 'dev'.
+remote:
+To https://github.com/tnkundwa/Gym-Git-Exercise-Solutions.git
+ * [new branch]      HEAD -> ft/bundle-2
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash pop
+On branch dev
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Dropped refs/stash@{0} (c046450615d8e9d87b466d784211628ed71e13d3)
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash list
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git reset --hard
+HEAD is now at d226dbf This is the home and team
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
+$ git stash list
+```
