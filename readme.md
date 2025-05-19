@@ -459,3 +459,56 @@ HEAD is now at d226dbf This is the home and team
 LONOVO@toussaintn23 MSYS ~/Git Exercises (dev)
 $ git stash list
 ```
+
+#Bundle 2
+## Exercise 1
+```bash
+LONOVO@toussaintn23 MSYS ~/Git Exercises (main)
+$ git checkout -b "ft/bundle-3"
+Switched to a new branch 'ft/bundle-3'
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (ft/bundle-3)
+$ git branch
+  dev
+* ft/bundle-3
+  main
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (ft/bundle-3)
+$ git add services.html 
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (ft/bundle-3)
+$ git commit -m "Working on exercise 3"
+[ft/bundle-3 750bd2a] Working on exercise 3
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (ft/bundle-3)
+$ git push
+fatal: The current branch ft/bundle-3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-3
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (ft/bundle-3)
+$ git push --set-upstream origin ft/bundle-3
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 466 bytes | 233.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'ft/bundle-3' on GitHub by visiting:
+remote:      https://github.com/tnkundwa/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-3
+remote:
+To https://github.com/tnkundwa/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-3 -> ft/bundle-3
+branch 'ft/bundle-3' set up to track 'origin/ft/bundle-3'.
+
+LONOVO@toussaintn23 MSYS ~/Git Exercises (ft/bundle-3)
+$
+```
