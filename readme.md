@@ -101,3 +101,49 @@ $ git add .
 $ git commit -m "Combined both services"
 $ git push
 ```
+
+#Bundle 3
+##Exercise 1
+```bash
+$ git checkout -b ft/team-page
+$ git add team1.html 
+$ git commit -m "Created a new html page"
+$ git push
+$ git push --set-upstream origin ft/team-page
+$ git checkout main
+$ git checkout -b ft/contact-page
+$ git checkout ft/team-page
+$ git log
+$ git checkout ft/contact-page 
+$ git cherry-pick d0ac4987d44efa72b60f45a3cb301fd5a018b60f
+$ git add contact.html 
+$ git status
+$ git commit -m "Added a new contact html page"
+$ git push
+$ git push --set-upstream origin ft/contact-page
+$ git checkout -b ft/faq-page
+$ git add .
+$ git commit -m "Added a new Faq page"
+$ git push
+$ git push --set-upstream origin ft/faq-page
+$ git revert d0ac4987d44efa72b60f45a3cb301fd5a018b60f
+$ git status
+$ git add .
+$ git commit -m "Just used the revert command"
+$ git push
+```
+##Exercise 2
+```bash
+$ git checkout ft/faq-page
+$ git checkout -b ft/home-page-redesign
+$ git checkout main
+$ git status
+$ git add .
+$ git push
+$ git checkout ft/home-page-redesign
+$ git rebase main
+$ git add .
+$ git commit -m "After rebasing I made some more changes"
+$ git push
+$ git push --set-upstream origin ft/home-page-redesign
+```
