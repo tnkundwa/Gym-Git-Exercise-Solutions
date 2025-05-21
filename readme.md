@@ -146,4 +146,5 @@ $ git add .
 $ git commit -m "After rebasing I made some more changes"
 $ git push
 $ git push --set-upstream origin ft/home-page-redesign
+
 ```
