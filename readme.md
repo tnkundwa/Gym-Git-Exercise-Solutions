@@ -134,3 +134,18 @@ $ git add .
 $ git commit -m "Just used the revert command"
 $ git push
 ```
+##Exercise 2
+```bash
+$ git checkout ft/faq-page
+$ git checkout -b ft/home-page-redesign
+$ git checkout main
+$ git status
+$ git add .
+$ git push
+$ git checkout ft/home-page-redesign
+$ git rebase main
+$ git add .
+$ git commit -m "After rebasing I made some more changes"
+$ git push
+$ git push --set-upstream origin ft/home-page-redesign
+```
