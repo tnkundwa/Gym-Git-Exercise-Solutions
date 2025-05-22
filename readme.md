@@ -163,3 +163,24 @@ $ git commit -m "I just made some changes to the home html page"
 $ git push
 $ git push git-copy
 ```
+##Exercise 2
+```bash
+$ git checkout -b ft/footer
+$ git status
+$ git add footer.html 
+$ git commit -m "Added a new footer html page"
+$ git add footer.html 
+$ git commit -m "Added more content to the footer page"
+$ git push
+$ git push --set-upstream origin ft/footer
+$ git checkout main
+$ git checkout -b ft/squashing
+$ git merge --squash ft/footer 
+$ git status
+$ git commit -m "footer changes squashing"
+$ git status
+$ git push
+$ git add .
+$ git push --set-upstream origin ft/squashing
+$
+```
