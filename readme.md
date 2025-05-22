@@ -196,7 +196,6 @@ $ cd ..
 $ git clone https://github.com/tnkundwa/git-cafe-exercise.git
 $ ls
 $ cd git-cafe-exercise/
-$ ls
 $ code .
 $ git checkout main 
 $ git status
