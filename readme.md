@@ -147,4 +147,41 @@ $ git commit -m "After rebasing I made some more changes"
 $ git push
 $ git push --set-upstream origin ft/home-page-redesign
 
+
+=======
+```
+
+#Bundle 4
+##Exercise 1
+```bash
+$ git checkout main
+$ git remote add git-copy https://github.com/tnkundwa/git-exercise-clone.git
+$ git remote
+$ git status
+$ git add home.html 
+$ git status
+$ git commit -m "I just made some changes to the home html page"
+$ git push
+$ git push git-copy
+```
+##Exercise 2
+```bash
+$ git checkout -b ft/footer
+$ git status
+$ git add footer.html 
+$ git commit -m "Added a new footer html page"
+$ git add footer.html 
+$ git commit -m "Added more content to the footer page"
+$ git push
+$ git push --set-upstream origin ft/footer
+$ git checkout main
+$ git checkout -b ft/squashing
+$ git merge --squash ft/footer 
+$ git status
+$ git commit -m "footer changes squashing"
+$ git status
+$ git push
+$ git add .
+$ git push --set-upstream origin ft/squashing
+$
 ```
