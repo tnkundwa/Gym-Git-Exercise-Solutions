@@ -184,3 +184,26 @@ $ git add .
 $ git push --set-upstream origin ft/squashing
 $
 ```
+#Bundle 5
+##Exrcise 2
+```bash
+$ ls
+$ cd ..
+
+LONOVO@toussaintn23 MINGW64 ~
+$ ls
+$ cd Git\ Exercises/
+$ ls
+$ cd ..
+$ git clone https://github.com/tnkundwa/git-cafe-exercise.git
+$ ls
+$ cd git-cafe-exercise/
+$ ls
+$ code .
+$ git checkout main 
+$ git status
+$ git add .
+$ git commit -m "Changed from place to restaurant"
+$ git push
+$
+```
