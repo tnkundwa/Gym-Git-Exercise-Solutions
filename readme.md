@@ -203,5 +203,4 @@ $ git status
 $ git add .
 $ git commit -m "Changed from place to restaurant"
 $ git push
-$
 ```
