@@ -149,3 +149,17 @@ $ git commit -m "After rebasing I made some more changes"
 $ git push
 $ git push --set-upstream origin ft/home-page-redesign
 ```
+
+#Bundle 4
+##Exercise 1
+```bash
+$ git checkout main
+$ git remote add git-copy https://github.com/tnkundwa/git-exercise-clone.git
+$ git remote
+$ git status
+$ git add home.html 
+$ git status
+$ git commit -m "I just made some changes to the home html page"
+$ git push
+$ git push git-copy
+```
