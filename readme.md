@@ -2,7 +2,6 @@
 
 ## Exercise one
 ```bash
-LONOVO@toussaintn23 MINGW64 ~/Git Exercises
 $ git init 
 $ git branch -M main
 $ git status
@@ -101,7 +100,6 @@ $ git status
 $ git add .
 $ git commit -m "Combined both services"
 $ git push
-$
 ```
 
 #Bundle 3
@@ -205,5 +203,4 @@ $ git status
 $ git add .
 $ git commit -m "Changed from place to restaurant"
 $ git push
-$
 ```
