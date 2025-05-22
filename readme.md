@@ -180,5 +180,4 @@ $ git status
 $ git push
 $ git add .
 $ git push --set-upstream origin ft/squashing
-$
 ```
