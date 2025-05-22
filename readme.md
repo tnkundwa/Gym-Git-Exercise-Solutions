@@ -2,7 +2,6 @@
 
 ## Exercise one
 ```bash
-LONOVO@toussaintn23 MINGW64 ~/Git Exercises
 $ git init 
 $ git branch -M main
 $ git status
@@ -101,7 +100,6 @@ $ git status
 $ git add .
 $ git commit -m "Combined both services"
 $ git push
-$
 ```
 
 #Bundle 3
@@ -148,6 +146,9 @@ $ git add .
 $ git commit -m "After rebasing I made some more changes"
 $ git push
 $ git push --set-upstream origin ft/home-page-redesign
+
+
+=======
 ```
 
 #Bundle 4
